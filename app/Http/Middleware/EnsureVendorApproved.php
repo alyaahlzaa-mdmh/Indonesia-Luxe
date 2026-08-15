@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use App\Enums\VendorStatus;
+use Closure;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+class EnsureVendorApproved
+{
+    /**
+     * Handle an incoming request.
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        $user = $request->user();
+
+        if ($user === null || ! $user->isVendor()) {
+            abort(403);
+        }
+
+        if ($user->vendorProfile?->status !== VendorStatus::Approved) {
+            return redirect()->route('vendor.pending');
+        }
+
+        return $next($request);
+    }
+}

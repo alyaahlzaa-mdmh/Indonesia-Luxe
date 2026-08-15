@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'back_to_home' => 'Kembali ke Beranda',
+    'title' => 'Cari Tour Impianmu',
+    'subtitle' => 'Temukan pengalaman liburan terbaik di seluruh Indonesia',
+    'search_button' => 'Cari',
+    'tours_found' => 'tour ditemukan',
+    'destinations_available' => 'Berbagai destinasi tersedia',
+    'filter' => 'Filter',
+    'category' => 'Kategori',
+    'all' => 'Semua',
+    'max_price' => 'Harga Maks',
+    'min_rating' => 'Rating Minimum',
+    'sort_by' => 'Urutkan',
+    'reset' => 'Reset',
+    'see_results' => 'Lihat Hasil',
+    'no_tours_found' => 'Tidak ada tour ditemukan',
+    'try_change_filter' => 'Coba ubah filter atau kata kunci pencarian',
+    'terbaru' => 'Terbaru',
+    'harga_terendah' => 'Harga Terendah',
+    'harga_tertinggi' => 'Harga Tertinggi',
+    'rating_tertinggi' => 'Rating Tertinggi',
+    'paling_populer' => 'Paling Populer',
+];

@@ -1,0 +1,39 @@
+[2026-03-30 13:12:00] local.ERROR: There are no commands defined in the "asset" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"asset\" namespace. at /var/www/indonesia-luxe/vendor/symfony/console/Application.php:694)
+[stacktrace]
+#0 /var/www/indonesia-luxe/vendor/symfony/console/Application.php(743): Symfony\\Component\\Console\\Application->findNamespace()
+#1 /var/www/indonesia-luxe/vendor/symfony/console/Application.php(298): Symfony\\Component\\Console\\Application->find()
+#2 /var/www/indonesia-luxe/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun()
+#3 /var/www/indonesia-luxe/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#4 /var/www/indonesia-luxe/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 /var/www/indonesia-luxe/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#6 {main}
+"} 
+[2026-03-30 13:12:15] local.ERROR: Command "optimize:cache" is not defined.
+
+Did you mean one of these?
+    config:cache
+    event:cache
+    make:cache-table
+    optimize
+    optimize:clear
+    route:cache
+    schedule:clear-cache
+    view:cache {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"optimize:cache\" is not defined.
+
+Did you mean one of these?
+    config:cache
+    event:cache
+    make:cache-table
+    optimize
+    optimize:clear
+    route:cache
+    schedule:clear-cache
+    view:cache at /var/www/indonesia-luxe/vendor/symfony/console/Application.php:759)
+[stacktrace]
+#0 /var/www/indonesia-luxe/vendor/symfony/console/Application.php(298): Symfony\\Component\\Console\\Application->find()
+#1 /var/www/indonesia-luxe/vendor/symfony/console/Application.php(195): Symfony\\Component\\Console\\Application->doRun()
+#2 /var/www/indonesia-luxe/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#3 /var/www/indonesia-luxe/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#4 /var/www/indonesia-luxe/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#5 {main}
+"} 

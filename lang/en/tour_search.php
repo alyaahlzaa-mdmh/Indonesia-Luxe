@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'back_to_home' => 'Back to Home',
+    'title' => 'Find Your Dream Tour',
+    'subtitle' => 'Discover the best holiday experiences across Indonesia',
+    'search_button' => 'Search',
+    'tours_found' => 'tours found',
+    'destinations_available' => 'Various destinations available',
+    'filter' => 'Filter',
+    'category' => 'Category',
+    'all' => 'All',
+    'max_price' => 'Max Price',
+    'min_rating' => 'Minimum Rating',
+    'sort_by' => 'Sort By',
+    'reset' => 'Reset',
+    'see_results' => 'See Results',
+    'no_tours_found' => 'No tours found',
+    'try_change_filter' => 'Try changing filters or search keywords',
+    'terbaru' => 'Latest',
+    'harga_terendah' => 'Lowest Price',
+    'harga_tertinggi' => 'Highest Price',
+    'rating_tertinggi' => 'Highest Rating',
+    'paling_populer' => 'Most Popular',
+];
