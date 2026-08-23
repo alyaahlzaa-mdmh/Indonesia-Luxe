@@ -24,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(\App\Services\CartService $cartService): void
     {
         $this->configureDefaults();
+        
+        if (app()->environment('production')) {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
 
         // Register observers
         \App\Models\Booking::observe(\App\Observers\BookingObserver::class);

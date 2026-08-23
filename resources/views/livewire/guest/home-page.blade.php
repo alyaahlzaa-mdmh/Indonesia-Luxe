@@ -48,7 +48,7 @@
 <div class="max-w-6xl mx-auto px-4 w-full">
     <!-- Activity Categories -->
     <section class="mb-20 text-center">
-        <div class="mb-6">
+        <div class="mb-20">
                 <p>
                     Indonesia Luxe Travel is Indonesia’s premier hospitality and destination management company dedicated to the international luxury market. We are your ultimate on-ground travel partner across the archipelago.
 
@@ -60,7 +60,9 @@
                 <p>
                     Contact our team at hello@indonesialuxetravel.com or send us an inquiry through our contact form below.
                 </p>
-            </div>
+
+        </div>
+
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium">{{ __('home.categories_title') }}</h2>
         <p class="text-slate-500 text-sm md:text-base mb-10">{{ __('home.categories_subtitle', ['count' => count($categories)]) }}</p>
         <div class="relative w-full overflow-hidden pb-12 mt-6">
