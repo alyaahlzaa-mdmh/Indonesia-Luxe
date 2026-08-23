@@ -72,10 +72,13 @@
     <!-- Activity Categories -->
     <section class="mb-20 text-center">
         <div class="mb-6">
-                
-                <p>Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.</p>
-                <br>
-                <p>To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.</p>
+                <p>
+                    Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.
+                </p>
+                    <br>
+                <p>
+                    To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.
+                </p>
             </div>
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium"><?php echo e(__('home.categories_title')); ?></h2>
         <p class="text-slate-500 text-sm md:text-base mb-10"><?php echo e(__('home.categories_subtitle', ['count' => count($categories)])); ?></p>
@@ -90,21 +93,21 @@
                 }
             }"
             x-init="setInterval(() => next(), 2000)"
-            class="relative w-full max-w-[280px] md:max-w-[320px] mx-auto pb-12 mt-6">
-            
+            class="relative w-full max-w-[600px] mx-auto pb-12 mt-6">
+
             <!-- Carousel wrapper -->
-            <div class="relative overflow-visible h-[240px]">
+            <div class="relative overflow-visible h-[480px]">
                 <?php $index = 0; ?>
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activityMeta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
-                <?php 
-                    $count = $typeCounts[$typeValue] ?? 0; 
+                <?php
+                    $count = $typeCounts[$typeValue] ?? 0;
                 ?>
                 <!-- Item <?php echo e($index + 1); ?> -->
                 <div class="absolute inset-0 transition-opacity duration-700 ease-in-out flex justify-center"
                      :class="activeSlide === <?php echo e($index); ?> ? 'opacity-100 z-20 pointer-events-auto' : 'opacity-0 z-10 pointer-events-none'">
-                    
-                    <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-[180px]">
-                        <div class="w-full aspect-square rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+
+                    <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-full">
+                        <div class="w-full h-[400px] rounded-[18px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                             <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -112,8 +115,8 @@
 
                             </div>
                         </div>
-                        <h3 class="font-serif font-medium text-slate-800 text-[15px] sm:text-[16px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
-                        <p class="text-slate-400 text-[12px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
+                        <h3 class="font-serif font-medium text-slate-800 text-[18px] sm:text-[20px] mb-1.5 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
+                        <p class="text-slate-400 text-[14px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
                     </a>
                 </div>
                 <?php $index++; ?>
@@ -123,19 +126,19 @@
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-2 rtl:space-x-reverse">
                 <template x-for="i in totalSlides" :key="i">
-                    <button type="button" @click="activeSlide = i - 1" class="w-2 h-2 rounded-full transition-colors focus:outline-none" 
+                    <button type="button" @click="activeSlide = i - 1" class="w-3 h-3 rounded-full transition-colors focus:outline-none"
                         :class="activeSlide === i - 1 ? 'bg-amber-500' : 'bg-gray-300'" aria-label="Slide"></button>
                 </template>
             </div>
-            
+
             <!-- Slider controls -->
-            <button @click="prev()" type="button" class="absolute top-0 -start-12 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+            <button @click="prev()" type="button" class="absolute top-0 -start-12 z-30 flex items-center justify-center h-[400px] px-2 cursor-pointer group focus:outline-none hidden sm:flex">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
                     <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button @click="next()" type="button" class="absolute top-0 -end-12 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+            <button @click="next()" type="button" class="absolute top-0 -end-12 z-30 flex items-center justify-center h-[400px] px-2 cursor-pointer group focus:outline-none hidden sm:flex">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
                     <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
                     <span class="sr-only">Next</span>
@@ -145,7 +148,59 @@
     </section>
 
     <!-- Popular Tours -->
-    
+    <section class="mb-16">
+        <div class="mb-6 flex items-center justify-between">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-1 font-medium"><?php echo e(__('home.tours_title')); ?></h2>
+                <p class="text-slate-500 text-sm md:text-base"><?php echo e(__('home.tours_subtitle')); ?></p>
+            </div>
+            <a href="<?php echo e(route('tours.index')); ?>" class="hidden md:flex items-center gap-2 text-amber-600 hover:text-amber-700 transition" data-discover="true">
+                <?php echo e(__('home.tours_view_all')); ?>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg></a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__empty_1 = true; $__currentLoopData = $featuredPackages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tourPackage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
+            <?php if (isset($component)) { $__componentOriginal4dedb5c206e93a40e5dec0a39924845e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal4dedb5c206e93a40e5dec0a39924845e = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.guest.tour-card','data' => ['tourPackage' => $tourPackage,'typeLabels' => $typeLabels,'variant' => 'default']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('guest.tour-card'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['tourPackage' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($tourPackage),'typeLabels' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($typeLabels),'variant' => 'default']); ?>
+<?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::processComponentKey($component); ?>
+
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal4dedb5c206e93a40e5dec0a39924845e)): ?>
+<?php $attributes = $__attributesOriginal4dedb5c206e93a40e5dec0a39924845e; ?>
+<?php unset($__attributesOriginal4dedb5c206e93a40e5dec0a39924845e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal4dedb5c206e93a40e5dec0a39924845e)): ?>
+<?php $component = $__componentOriginal4dedb5c206e93a40e5dec0a39924845e; ?>
+<?php unset($__componentOriginal4dedb5c206e93a40e5dec0a39924845e); ?>
+<?php endif; ?>
+            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
+            <p class="text-sm text-gray-500 col-span-2 lg:col-span-4 text-center py-8"><?php echo e(__('home.tours_empty')); ?></p>
+            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        </div>
+        <div class="text-center mt-8 md:hidden">
+            <a href="<?php echo e(route('tours.index')); ?>" class="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition" data-discover="true">
+                <?php echo e(__('home.tours_view_all')); ?>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4">
+                    <path d="m9 18 6-6-6-6"></path>
+                </svg>
+            </a>
+        </div>
+    </section> --}}
 
     <!-- Popular Tours -->
     <section class="mb-16">

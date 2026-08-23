@@ -49,10 +49,13 @@
     <!-- Activity Categories -->
     <section class="mb-20 text-center">
         <div class="mb-6">
-                {{-- <h3>Description</h3> --}}
-                <p>Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.</p>
-                <br>
-                <p>To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.</p>
+                <p>
+                    Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.
+                </p>
+                    <br>
+                <p>
+                    To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.
+                </p>
             </div>
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium">{{ __('home.categories_title') }}</h2>
         <p class="text-slate-500 text-sm md:text-base mb-10">{{ __('home.categories_subtitle', ['count' => count($categories)]) }}</p>
@@ -67,29 +70,29 @@
                 }
             }"
             x-init="setInterval(() => next(), 2000)"
-            class="relative w-full max-w-[280px] md:max-w-[320px] mx-auto pb-12 mt-6">
-            
+            class="relative w-full max-w-[600px] mx-auto pb-12 mt-6">
+
             <!-- Carousel wrapper -->
-            <div class="relative overflow-visible h-[240px]">
+            <div class="relative overflow-visible h-[480px]">
                 @php $index = 0; @endphp
                 @foreach($activityMeta as $typeValue => $meta)
-                @php 
-                    $count = $typeCounts[$typeValue] ?? 0; 
+                @php
+                    $count = $typeCounts[$typeValue] ?? 0;
                 @endphp
                 <!-- Item {{ $index + 1 }} -->
                 <div class="absolute inset-0 transition-opacity duration-700 ease-in-out flex justify-center"
                      :class="activeSlide === {{ $index }} ? 'opacity-100 z-20 pointer-events-auto' : 'opacity-0 z-10 pointer-events-none'">
-                    
-                    <a href="{{ route('tours.index') }}?type={{ $typeValue }}" class="flex flex-col items-center group w-[180px]">
-                        <div class="w-full aspect-square rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+
+                    <a href="{{ route('tours.index') }}?type={{ $typeValue }}" class="flex flex-col items-center group w-full">
+                        <div class="w-full h-[400px] rounded-[18px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                             <img src="{{ asset('images/' . $meta['img']) }}" alt="{{ $typeLabels[$typeValue] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
                                 {!! $meta['icon'] !!}
                             </div>
                         </div>
-                        <h3 class="font-serif font-medium text-slate-800 text-[15px] sm:text-[16px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center">{!! str_replace(' / ', ' /<br>', $typeLabels[$typeValue]) !!}</h3>
-                        <p class="text-slate-400 text-[12px] leading-tight text-center px-1">{{ __('home.categories_packages_available', ['count' => $count]) }}</p>
+                        <h3 class="font-serif font-medium text-slate-800 text-[18px] sm:text-[20px] mb-1.5 leading-tight group-hover:text-amber-600 transition-colors text-center">{!! str_replace(' / ', ' /<br>', $typeLabels[$typeValue]) !!}</h3>
+                        <p class="text-slate-400 text-[14px] leading-tight text-center px-1">{{ __('home.categories_packages_available', ['count' => $count]) }}</p>
                     </a>
                 </div>
                 @php $index++; @endphp
@@ -99,19 +102,19 @@
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-2 rtl:space-x-reverse">
                 <template x-for="i in totalSlides" :key="i">
-                    <button type="button" @click="activeSlide = i - 1" class="w-2 h-2 rounded-full transition-colors focus:outline-none" 
+                    <button type="button" @click="activeSlide = i - 1" class="w-3 h-3 rounded-full transition-colors focus:outline-none"
                         :class="activeSlide === i - 1 ? 'bg-amber-500' : 'bg-gray-300'" aria-label="Slide"></button>
                 </template>
             </div>
-            
+
             <!-- Slider controls -->
-            <button @click="prev()" type="button" class="absolute top-0 -start-12 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+            <button @click="prev()" type="button" class="absolute top-0 -start-12 z-30 flex items-center justify-center h-[400px] px-2 cursor-pointer group focus:outline-none hidden sm:flex">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
                     <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button @click="next()" type="button" class="absolute top-0 -end-12 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+            <button @click="next()" type="button" class="absolute top-0 -end-12 z-30 flex items-center justify-center h-[400px] px-2 cursor-pointer group focus:outline-none hidden sm:flex">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
                     <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
                     <span class="sr-only">Next</span>
@@ -121,7 +124,7 @@
     </section>
 
     <!-- Popular Tours -->
-    {{-- <section class="mb-16">
+    <section class="mb-16">
         <div class="mb-6 flex items-center justify-between">
             <div>
                 <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-1 font-medium">{{ __('home.tours_title') }}</h2>
