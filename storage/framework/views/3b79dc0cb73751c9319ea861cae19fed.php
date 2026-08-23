@@ -84,20 +84,25 @@
                 totalSlides: <?php echo e(ceil(count($activityMeta) / 2)); ?>,
                 next() {
                     this.activeSlide = (this.activeSlide + 1) % this.totalSlides;
+                },
+                prev() {
+                    this.activeSlide = (this.activeSlide - 1 + this.totalSlides) % this.totalSlides;
                 }
             }"
             x-init="setInterval(() => next(), 2000)"
-            class="relative w-full overflow-hidden pb-6">
+            class="relative w-full max-w-4xl mx-auto pb-12 mt-6">
             
-            <div class="flex transition-transform duration-500 ease-out"
-                 :style="`transform: translateX(-${activeSlide * 100}%)`">
-                
+            <!-- Carousel wrapper -->
+            <div class="relative overflow-visible h-[240px]">
                 <?php $activities = collect($activityMeta)->chunk(2); ?>
-                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
-                <div class="w-full flex-shrink-0 flex justify-center gap-4 md:gap-8 px-4 md:px-0">
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
+                <!-- Item <?php echo e($index + 1); ?> -->
+                <div class="absolute inset-0 transition-opacity duration-700 ease-in-out flex justify-center gap-6"
+                     :class="activeSlide === <?php echo e($index); ?> ? 'opacity-100 z-20 pointer-events-auto' : 'opacity-0 z-10 pointer-events-none'">
+                    
                     <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
                     <?php $count = $typeCounts[$typeValue] ?? 0; ?>
-                    <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-1/2 max-w-[160px]">
+                    <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-[140px] md:w-[160px]">
                         <div class="w-full aspect-square rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                             <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
@@ -114,13 +119,27 @@
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
             </div>
 
-            <!-- Indicators -->
-            <div class="flex justify-center gap-2 mt-6">
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-3 rtl:space-x-reverse">
                 <template x-for="i in totalSlides" :key="i">
-                    <button @click="activeSlide = i - 1" class="w-2 h-2 rounded-full transition-colors focus:outline-none"
-                         :class="activeSlide === i - 1 ? 'bg-amber-500' : 'bg-gray-300'"></button>
+                    <button type="button" @click="activeSlide = i - 1" class="w-2 h-2 rounded-full transition-colors focus:outline-none" 
+                        :class="activeSlide === i - 1 ? 'bg-amber-500' : 'bg-gray-300'" aria-label="Slide"></button>
                 </template>
             </div>
+            
+            <!-- Slider controls -->
+            <button @click="prev()" type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
+                    <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/></svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button @click="next()" type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-[200px] px-2 cursor-pointer group focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white border border-gray-200 focus:ring-4 focus:ring-gray-100 transition shadow-sm">
+                    <svg class="w-5 h-5 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
         </div>
     </section>
 
