@@ -5,7 +5,7 @@ return [
     // Hero Section
     'hero_title_prefix' => 'Explore the',
     'hero_title_highlight' => 'Extraordinary Indonesia',
-    'hero_subtitle_line1' => 'Discover premium adventure experiences from Open Trips to',
+    'hero_subtitle_line1' => 'Discover Curated Adventures and Exclusive Experiences Across Indonesia',
     'hero_subtitle_line2' => 'Local Experiences across Indonesia',
     'hero_search_button' => 'Search',
     'hero_search_strings' => 'Search "Borobudur Sunrise Tour"|Search "Derawan"|Search "Bali"|Search "Lombok"|Search "Komodo"|Search "Raja Ampat"|Search "Sumba"|Search "Bromo"',
