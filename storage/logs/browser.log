@@ -49543,3 +49543,165 @@ Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","u
     at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
     at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
     at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T11:45:00.864Z"} 
+[2026-08-23 14:58:33] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:30.906Z"} 
+[2026-08-23 14:58:33] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:30.907Z"} 
+[2026-08-23 14:58:33] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:31.078Z"} 
+[2026-08-23 14:58:33] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:31.098Z"} 
+[2026-08-23 14:58:33] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:31.098Z"} 
+[2026-08-23 14:58:47] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:46.824Z"} 
+[2026-08-23 14:58:47] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:46.824Z"} 
+[2026-08-23 14:58:47] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:46.893Z"} 
+[2026-08-23 14:58:47] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:46.902Z"} 
+[2026-08-23 14:58:47] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:46.902Z"} 
+[2026-08-23 14:58:54] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:53.464Z"} 
+[2026-08-23 14:58:54] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1071 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:53.465Z"} 
+[2026-08-23 14:58:54] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:53.541Z"} 
+[2026-08-23 14:58:54] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:53.565Z"} 
+[2026-08-23 14:58:54] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:58:53.565Z"} 
+[2026-08-23 14:59:04] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1070 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:04.145Z"} 
+[2026-08-23 14:59:04] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1070 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:04.145Z"} 
+[2026-08-23 14:59:04] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:04.198Z"} 
+[2026-08-23 14:59:04] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:04.206Z"} 
+[2026-08-23 14:59:04] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:04.206Z"} 
+[2026-08-23 14:59:17] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1070 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:16.792Z"} 
+[2026-08-23 14:59:17] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1070 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:16.792Z"} 
+[2026-08-23 14:59:17] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:16.844Z"} 
+[2026-08-23 14:59:17] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:16.922Z"} 
+[2026-08-23 14:59:17] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T14:59:16.922Z"} 
+[2026-08-23 15:01:12] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1084 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T15:01:12.182Z"} 
+[2026-08-23 15:01:13] local.ERROR: Uncaught SyntaxError: Unexpected token '!' http://127.0.0.1:8000/ 1084 17 SyntaxError Unexpected token '!' SyntaxError: Unexpected token '!' {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T15:01:12.182Z"} 
+[2026-08-23 15:01:13] local.WARNING: Alpine Expression Error: showVendorSidebar is not defined
+
+Expression: "showVendorSidebar" null 87 null  {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T15:01:12.255Z"} 
+[2026-08-23 15:01:13] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T15:01:12.290Z"} 
+[2026-08-23 15:01:13] local.ERROR: Uncaught ReferenceError: showVendorSidebar is not defined http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae 1330 7 ReferenceError showVendorSidebar is not defined ReferenceError: showVendorSidebar is not defined
+    at [Alpine] showVendorSidebar (eval at safeAsyncFunction (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1385:21), <anonymous>:3:32)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1410:28
+    at tryCatch (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1309:14)
+    at http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:19
+    at reactiveEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2693:18)
+    at Object.effect2 [as effect] (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:2668:7)
+    at effect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:935:35)
+    at wrappedEffect (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:951:29)
+    at Function.<anonymous> (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:3955:5)
+    at flushHandlers (http://127.0.0.1:8000/livewire-327c987f/livewire.js?id=cfc5c1ae:1527:48) {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-23T15:01:12.290Z"} 

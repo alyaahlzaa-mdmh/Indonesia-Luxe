@@ -72,41 +72,54 @@
     <!-- Activity Categories -->
     <section class="mb-20 text-center">
         <div class="mb-6">
-                <h3>Description</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id aut vel magnam nemo deleniti itaque accusantium. Enim dolores nemo consequuntur vitae voluptatem animi aliquid mollitia iusto? Optio corrupti suscipit quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae culpa blanditiis consequatur amet qui sunt impedit omnis repudiandae minima laboriosam rerum facilis, eaque eligendi iste, quod, minus et maiores adipisci ex? Sint quo cupiditate ipsa in voluptatem soluta voluptates quidem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde recusandae enim fuga similique incidunt ipsa, quam esse quidem dolore ratione eos vel delectus illo eligendi ullam commodi sequi fugit magnam laboriosam! Dignissimos distinctio quia quos nihil asperiores rerum itaque similique perspiciatis incidunt sunt. Eius deleniti reprehenderit id quibusdam corporis optio quidem porro dolor maxime, aliquid laboriosam, veritatis est commodi! A et amet eveniet omnis nostrum numquam fuga, quis saepe at cum doloribus. Et molestias est, quod explicabo ipsa atque suscipit ea, dicta reprehenderit sunt minima, eligendi similique quisquam voluptate quasi quidem asperiores nesciunt temporibus repellat modi voluptates laboriosam perferendis. Hic.</p>
+                
+                <p>Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.</p>
+                <br>
+                <p>To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.</p>
             </div>
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium"><?php echo e(__('home.categories_title')); ?></h2>
         <p class="text-slate-500 text-sm md:text-base mb-10"><?php echo e(__('home.categories_subtitle', ['count' => count($categories)])); ?></p>
-
         <div x-data="{
-                scrollNext() {
-                    let container = this.$refs.carousel;
-                    if(container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-                        container.scrollTo({ left: 0, behavior: 'smooth' });
-                    } else {
-                        container.scrollBy({ left: 156, behavior: 'smooth' });
-                    }
+                activeSlide: 0,
+                totalSlides: <?php echo e(ceil(count($activityMeta) / 2)); ?>,
+                next() {
+                    this.activeSlide = (this.activeSlide + 1) % this.totalSlides;
                 }
             }"
-            x-init="setInterval(() => scrollNext(), 2000)"
-            class="relative w-full">
+            x-init="setInterval(() => next(), 2000)"
+            class="relative w-full overflow-hidden pb-6">
             
-            <div x-ref="carousel" class="flex overflow-x-auto gap-4 md:gap-5 pb-6 snap-x snap-mandatory hide-scrollbar">
-                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activityMeta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
-                <?php $count = $typeCounts[$typeValue] ?? 0; ?>
-                <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex-shrink-0 snap-start flex flex-col items-center group w-[136px]">
-                    <div class="w-full aspect-square md:w-[136px] md:h-[136px] rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <?php echo $meta['icon']; ?>
+            <div class="flex transition-transform duration-500 ease-out"
+                 :style="`transform: translateX(-${activeSlide * 100}%)`">
+                
+                <?php $activities = collect($activityMeta)->chunk(2); ?>
+                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
+                <div class="w-full flex-shrink-0 flex justify-center gap-4 md:gap-8 px-4 md:px-0">
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
+                    <?php $count = $typeCounts[$typeValue] ?? 0; ?>
+                    <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-1/2 max-w-[160px]">
+                        <div class="w-full aspect-square rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                            <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <?php echo $meta['icon']; ?>
 
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="font-serif font-medium text-slate-800 text-[14px] sm:text-[15px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
-                    <p class="text-slate-400 text-[11px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
-                </a>
+                        <h3 class="font-serif font-medium text-slate-800 text-[14px] sm:text-[15px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
+                        <p class="text-slate-400 text-[11px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
+                    </a>
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
+                </div>
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
+            </div>
+
+            <!-- Indicators -->
+            <div class="flex justify-center gap-2 mt-6">
+                <template x-for="i in totalSlides" :key="i">
+                    <button @click="activeSlide = i - 1" class="w-2 h-2 rounded-full transition-colors focus:outline-none"
+                         :class="activeSlide === i - 1 ? 'bg-amber-500' : 'bg-gray-300'"></button>
+                </template>
             </div>
         </div>
     </section>
