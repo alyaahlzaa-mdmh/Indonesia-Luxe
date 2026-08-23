@@ -15,13 +15,13 @@ enum PackageType: string
     public function label(): string
     {
         return match ($this) {
-            self::OpenTrip => 'Open Trip',
-            self::PrivateTour => 'Private Tour',
-            self::HikingCamping => 'Hiking / Camping',
-            self::Rafting => 'Rafting',
-            self::SnorkelingDiving => 'Snorkeling / Diving',
-            self::JeepAdventure => 'Jeep Adventure',
-            self::LocalExperience => 'Local Experience',
+            self::OpenTrip => 'Private Island Tours',
+            self::PrivateTour => 'Boat & Snorkeling Charters',
+            self::HikingCamping => 'Scenic Volcano & Jeep Tours',
+            self::Rafting => 'Nature & River Rafting',
+            self::SnorkelingDiving => 'Wellness & Resort Stays',
+            self::JeepAdventure => 'Local Culture & Heritage',
+            self::LocalExperience => 'Authentic Local Dining',
         };
     }
 }
