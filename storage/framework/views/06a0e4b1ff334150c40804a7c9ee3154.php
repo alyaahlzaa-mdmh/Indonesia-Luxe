@@ -1,17 +1,13 @@
 <footer class="bg-gray-900 text-white">
   <div class="max-w-7xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <div class="flex items-center gap-3 mb-4"><img src="<?php echo e(asset('/images/logo.png')); ?>" alt="Indonesia Luxe" class="h-16 w-auto brightness-200 font-serif"><span class="text-amber-400 font-serif text-lg tracking-[0.15em]">INDONESIA LUXE</span></div>
         <p class="text-gray-400 text-sm"><?php echo e(__('footer.description')); ?></p>
       </div>
       <div>
-        <h3 class="text-amber-400 mb-4"><?php echo e(__('footer.activities')); ?></h3>
-        <div class="space-y-2"><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Open%20Trip" data-discover="true">Open Trip</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Private%20Tour" data-discover="true">Private Tour</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Hiking%20%2F%20Camping" data-discover="true">Hiking / Camping</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Rafting" data-discover="true">Rafting</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Snorkeling%20%2F%20Diving" data-discover="true">Snorkeling / Diving</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Jeep%20Adventure" data-discover="true">Jeep Adventure</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search?category=Local%20Experience" data-discover="true">Local Experience</a></div>
-      </div>
-      <div>
         <h3 class="text-amber-400 mb-4"><?php echo e(__('footer.information')); ?></h3>
-        <div class="space-y-2"><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search" data-discover="true"><?php echo e(__('footer.search_tour')); ?></a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/login" data-discover="true"><?php echo e(__('footer.login')); ?></a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/register" data-discover="true"><?php echo e(__('footer.register_vendor')); ?></a></div>
+        <div class="space-y-2"><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search" data-discover="true"><?php echo e(__('footer.search_tour')); ?></a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/login" data-discover="true"><?php echo e(__('footer.login')); ?></a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/register" data-discover="true"><?php echo e(__('footer.register_vendor')); ?></a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="#" data-discover="true"><?php echo e(__('footer.visa_info')); ?></a></div>
       </div>
       <div>
         <h3 class="text-amber-400 mb-4"><?php echo e(__('footer.contact_us')); ?></h3>

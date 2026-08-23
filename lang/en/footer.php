@@ -7,5 +7,6 @@ return [
     'search_tour' => 'Search Tours',
     'login' => 'Sign In',
     'register_vendor' => 'Register as Vendor',
+    'visa_info' => 'Visa Information',
     'contact_us' => 'Contact Us',
 ];

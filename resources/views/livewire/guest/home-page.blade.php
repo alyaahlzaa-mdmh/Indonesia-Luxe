@@ -361,6 +361,148 @@
         </div>
     </section>
 
+    {{-- Visa Information --}}
+    <section class="mb-24 mt-16">
+        <div class="pt-10 max-w-5xl mx-auto px-4 md:px-2">
+            <h2 class="text-2xl md:text-[28px] font-serif text-[#1e293b] font-medium mb-1.5 tracking-wide">Visa Information</h2>
+            <p class="text-slate-500 text-[13px] mb-8 font-light tracking-wide">Planning your trip to Indonesia? Here is a quick guide to entry requirements, visa options, and essential travel documents for your visit.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Visa on Arrival -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow flex flex-col">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="8" width="18" height="12" rx="2"></rect>
+                                <path d="M4 8v-2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"></path>
+                                <line x1="12" y1="12" x2="12" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">Visa on Arrival (e-VoA)</h3>
+                            <p class="text-[13px] text-slate-500">Most popular for tourists</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6 flex-1">
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Eligibility:</strong> Available for 90+ nationalities</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Stay:</strong> Up to 30 days (extendable once)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Fee:</strong> IDR 500,000 (approx. USD 35)</span>
+                        </li>
+                    </ul>
+                    <a href="https://evisa.imigrasi.go.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full bg-amber-500 hover:bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm">
+                        Apply Official e-VoA
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: ASEAN -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow flex flex-col">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">ASEAN Visa Exemption</h3>
+                            <p class="text-[13px] text-slate-500">Free entry for neighbors</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6 flex-1">
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Eligibility:</strong> ASEAN passport holders (e.g., Singapore, Malaysia, Thailand)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Stay:</strong> Up to 30 days (non-extendable)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Fee:</strong> Free</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Extended Tourism -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow flex flex-col">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">Extended Tourism (B211A)</h3>
+                            <p class="text-[13px] text-slate-500">For longer stays</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6 flex-1">
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Eligibility:</strong> Selected nationalities</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Stay:</strong> Up to 60 days (extendable once)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Fee:</strong> IDR 1,500,000 (approx. USD 100)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Essential Checklist -->
+                <div class="bg-gray-50/50 rounded-2xl border border-gray-200 border-dashed p-6 sm:p-8 flex flex-col">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-3 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">Essential Entry Checklist</h3>
+                            <p class="text-[13px] text-slate-500">Requirements for all visitors</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-4 flex-1">
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-1.5 shrink-0"></span>
+                            <span><strong>Passport:</strong> Minimum 6 months validity</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-1.5 shrink-0"></span>
+                            <span><strong>Ticket:</strong> Proof of onward or return flight</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-1.5 shrink-0"></span>
+                            <span><strong>Customs:</strong> Electronic Customs Declaration (e-ECD)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-1.5 shrink-0"></span>
+                            <span><strong>Bali Levy:</strong> IDR 150,000 (entering Bali)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-400 italic text-center mt-8 px-4">
+                * Note: Visa fees and entry regulations are subject to change based on official Indonesian government policies.
+            </p>
+        </div>
+    </section>
+
 </div>
 </div>
 
