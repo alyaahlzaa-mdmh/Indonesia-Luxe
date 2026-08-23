@@ -12,7 +12,7 @@ return [
 
     // Activity Categories
     'categories_title' => 'Choose Your Favorite Activity',
-    'categories_subtitle' => ':count adventure categories waiting to be explored',
+    'categories_subtitle' => 'adventure categories waiting to be explored',
     'categories_packages_available' => ':count packages available',
 
     // Popular Tours

@@ -73,11 +73,15 @@
     <section class="mb-20 text-center">
         <div class="mb-6">
                 <p>
-                    Indonesia’s premier hospitality and destination management company that fully caters to the international luxury market. We are the ultimate luxury travel partner you’ll need when you visit Indonesia. We plan and execute every aspect of your bespoke itinerary from the moment you land to the moment you leave. We bring seamless organisation and one-of-a-kind experiences to your vacation, luxury brand event, VIP visit, corporate incentive program, or specialized private tours across the Indonesian archipelago.
+                    Indonesia Luxe Travel is Indonesia’s premier hospitality and destination management company dedicated to the international luxury market. We are your ultimate on-ground travel partner across the archipelago.
+
+                    From the moment you land until the day you depart, we design and execute flawless, bespoke itineraries tailored to your highest standards. We bring seamless organization, absolute privacy, and one-of-a-kind experiences to your private vacations, VIP escapes, and exclusive journeys across Indonesia.
+
+                    Elevate your Indonesian journey with us.
                 </p>
                     <br>
                 <p>
-                    To find out how we can elevate your Indonesia journey, contact us at hello@indonesialuxetravel.com or via our contact form.
+                    Contact our team at hello@indonesialuxetravel.com or send us an inquiry through our contact form below.
                 </p>
             </div>
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium"><?php echo e(__('home.categories_title')); ?></h2>
@@ -87,8 +91,8 @@
                 
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activityMeta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
                 <?php $count = $typeCounts[$typeValue] ?? 0; ?>
-                <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-[280px] sm:w-[320px]">
-                    <div class="w-full h-[360px] md:h-[400px] rounded-[18px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <div class="flex flex-col items-center group w-[280px] sm:w-[320px]">
+                    <div class="w-full h-[360px] md:h-[400px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                         <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
@@ -97,15 +101,15 @@
                         </div>
                     </div>
                     <h3 class="font-serif font-medium text-slate-800 text-[16px] sm:text-[18px] mb-1.5 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
-                    <p class="text-slate-400 text-[13px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
-                </a>
+
+                </div>
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
 
                 
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $activityMeta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $typeValue => $meta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
                 <?php $count = $typeCounts[$typeValue] ?? 0; ?>
-                <a href="<?php echo e(route('tours.index')); ?>?type=<?php echo e($typeValue); ?>" class="flex flex-col items-center group w-[280px] sm:w-[320px]">
-                    <div class="w-full h-[360px] md:h-[400px] rounded-[18px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                <div class="flex flex-col items-center group w-[280px] sm:w-[320px]">
+                    <div class="w-full h-[360px] md:h-[400px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
                         <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
@@ -114,8 +118,8 @@
                         </div>
                     </div>
                     <h3 class="font-serif font-medium text-slate-800 text-[16px] sm:text-[18px] mb-1.5 leading-tight group-hover:text-amber-600 transition-colors text-center"><?php echo str_replace(' / ', ' /<br>', $typeLabels[$typeValue]); ?></h3>
-                    <p class="text-slate-400 text-[13px] leading-tight text-center px-1"><?php echo e(__('home.categories_packages_available', ['count' => $count])); ?></p>
-                </a>
+
+                </div>
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
             </div>
         </div>
@@ -322,7 +326,7 @@
         <div id="destinasi-scroll" class="flex overflow-x-auto gap-4 md:gap-5 pb-4 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory hide-scrollbar">
             <?php
             $destinations = [
-            ['name' => 'Jakarta', 'count' => '1000', 'img' => 'jakarta.jpg'],
+            ['name' => 'Jakarta', 'count' => '85', 'img' => 'jakarta.jpg'],
             ['name' => 'Bali', 'count' => '210', 'img' => 'bali.jpg'],
             ['name' => 'Yogyakarta', 'count' => '120', 'img' => 'yogyakarta.jpg'],
             ['name' => 'Lombok', 'count' => '75', 'img' => 'lombok.jpg'],
