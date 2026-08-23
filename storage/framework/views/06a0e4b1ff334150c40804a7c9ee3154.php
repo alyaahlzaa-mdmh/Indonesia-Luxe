@@ -19,14 +19,13 @@
           <a href="<?php echo e(getWhatsappMeUrl()); ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-400 hover:text-green-400 text-sm transition">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-4 h-4">
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-            </svg> <?php echo e(getAdminPhone()); ?>
-
+            </svg> (+62) 81122823000
           </a>
-          <a href="mailto:partners@indonesialuxetravel.com" class="flex items-center gap-2 text-gray-400 text-sm">
+          <a href="mailto:Hello@indonesialuxetavel.com" class="flex items-center gap-2 text-gray-400 text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4">
               <rect width="20" height="16" x="2" y="4" rx="2"></rect>
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg> partners@indonesialuxetravel.com
+            </svg> Hello@indonesialuxetavel.com
           </a>
           <div class="flex items-center gap-2 text-gray-400 text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-4 h-4">
@@ -58,4 +57,5 @@
     </div>
     <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">© 2026 Indonesia Luxe Travel. All rights reserved.</div>
   </div>
-</footer><?php /**PATH C:\Users\fazar\indonesia-luxe-backup\indonesia-luxe\resources\views/partials/footer.blade.php ENDPATH**/ ?>
+</footer>
+<?php /**PATH C:\Users\fazar\indonesia-luxe-backup\indonesia-luxe\resources\views/partials/footer.blade.php ENDPATH**/ ?>

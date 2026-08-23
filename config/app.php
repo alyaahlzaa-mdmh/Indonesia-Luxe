@@ -133,6 +133,6 @@ return [
     |
     */
 
-    'admin_whatsapp' => env('ADMIN_WHATSAPP', '6287890333000'),
+    'admin_whatsapp' => env('ADMIN_WHATSAPP', '6281122823000'),
 
 ];

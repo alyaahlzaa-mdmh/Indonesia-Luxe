@@ -2,7 +2,7 @@
 
 /**
  * Contact Information Helper Functions
- * 
+ *
  * These functions provide convenient access to contact information
  * from the centralized contact configuration.
  */
@@ -10,13 +10,13 @@
 if (!function_exists('getAdminWhatsapp')) {
     /**
      * Get the admin WhatsApp number
-     * 
+     *
      * @param bool $withPlus If true, returns with '+' prefix, otherwise returns plain number
      * @return string Admin WhatsApp number
      */
     function getAdminWhatsapp($withPlus = false)
     {
-        $number = config('contact.whatsapp.admin', '6287890333000');
+        $number = config('contact.whatsapp.admin', '6281122823000');
 
         if ($withPlus && strpos($number, '+') === false) {
             return '+' . $number;
@@ -33,31 +33,31 @@ if (!function_exists('getAdminWhatsapp')) {
 if (!function_exists('getAdminPhone')) {
     /**
      * Get the admin phone number
-     * 
+     *
      * @return string Admin phone number with '+' prefix
      */
     function getAdminPhone()
     {
-        return config('contact.phone.admin', '+6287890333000');
+        return config('contact.phone.admin', '+6281122823000');
     }
 }
 
 if (!function_exists('getDefaultWhatsappMessage')) {
     /**
      * Get the default WhatsApp message
-     * 
+     *
      * @return string Default message for WhatsApp
      */
     function getDefaultWhatsappMessage()
     {
-        return config('contact.whatsapp.default_message', 'Halo, saya ingin konsultasi tentang Sultanah Tour.');
+        return config('contact.whatsapp.default_message', "Hi Indonesia Luxe Travel! I'm planning a trip to Indonesia and would like to ask a few questions about your services. Thank you!");
     }
 }
 
 if (!function_exists('getWhatsappUrl')) {
     /**
      * Generate WhatsApp URL for opening chat
-     * 
+     *
      * @param string|null $message Optional custom message
      * @return string WhatsApp API URL
      */
@@ -73,20 +73,20 @@ if (!function_exists('getWhatsappUrl')) {
 if (!function_exists('getWhatsappMeUrl')) {
     /**
      * Generate WhatsApp wa.me URL for opening chat
-     * 
+     *
      * @return string WhatsApp wa.me URL
      */
     function getWhatsappMeUrl()
     {
         $phone = getAdminWhatsapp();
-        return 'https://wa.me/' . $phone;
+        return 'https://wa.me/+6281122823000';
     }
 }
 
 if (!function_exists('getPackageWhatsappUrl')) {
     /**
      * Generate WhatsApp URL for package inquiry
-     * 
+     *
      * @param string $packageName Package name
      * @param float $price Package price
      * @return string WhatsApp API URL for package inquiry
@@ -104,7 +104,7 @@ if (!function_exists('getPackageWhatsappUrl')) {
 if (!function_exists('getBookingWhatsappUrl')) {
     /**
      * Generate WhatsApp URL for package inquiry
-     * 
+     *
      * @param string $packageName Package name
      * @param float $price Package price
      * @return string WhatsApp API URL for package inquiry
