@@ -1,0 +1,126 @@
+<div x-show="showVendorSidebar" class="fixed inset-0 z-50 flex lg:hidden">
+  <div x-show="showVendorSidebar" x-transition.opacity @click="showVendorSidebar = false" class="absolute inset-0 bg-black/50"></div>
+  <div x-show="showVendorSidebar" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="transform -translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform -translate-x-full" class="relative w-64 bg-white h-full shadow-xl flex flex-col">
+    <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+      <div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Vendor Dashboard</p>
+        <p class="text-sm text-gray-800 mt-0.5"><?php echo e(auth()->user()->name); ?></p>
+      </div>
+      <button @click="showVendorSidebar = false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-5 h-5 text-gray-400">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-3 space-y-0.5 overflow-y-auto">
+      <?php
+      $navItems = [
+      [
+      'label' => 'Overview',
+      'route' => 'vendor.dashboard',
+      'icon' => 'layout-dashboard',
+      'active' => request()->routeIs('vendor.dashboard'),
+      ],
+      [
+      'label' => 'Paket Tour',
+      'route' => 'vendor.packages.*',
+      'icon' => 'package',
+      'active' => request()->routeIs('vendor.packages.*'),
+      ],
+      [
+      'label' => 'Pesanan',
+      'route' => 'vendor.bookings.*',
+      'icon' => 'shopping-bag',
+      'active' => request()->routeIs('vendor.bookings.*'),
+      ],
+      [
+      'label' => 'Ulasan',
+      'route' => 'vendor.review.*',
+      'icon' => 'message-square',
+      'active' => request()->routeIs('vendor.review.*'),
+      ],
+      [
+      'label' => 'Laporan',
+      'route' => 'vendor.reports.*',
+      'icon' => 'chart-column',
+      'active' => request()->routeIs('vendor.reports.*'),
+      ],
+      [
+      'label' => 'Promo',
+      'route' => 'vendor.promo.*',
+      'icon' => 'percent',
+      'active' => request()->routeIs('vendor.promo.*'),
+      ],
+      [
+      'label' => 'Wallet',
+      'route' => 'vendor.wallet.*',
+      'icon' => 'wallet',
+      'active' => request()->routeIs('vendor.wallet.*'),
+      ],
+      ];
+      ?>
+      <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $navItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
+      <a href="<?php echo e(Route::has($item['route']) ? route($item['route']) : (str_contains($item['route'], '*') ? (Route::has(str_replace('.*', '.index', $item['route'])) ? route(str_replace('.*', '.index', $item['route'])) : (Route::has(str_replace('.*', '.sales', $item['route'])) ? route(str_replace('.*', '.sales', $item['route'])) : '#')) : '#')); ?>"
+        class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm text-left transition-all <?php echo e($item['active'] ? 'bg-amber-50 text-amber-700 border border-amber-200' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-800'); ?>">
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($item['icon'] === 'layout-dashboard'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+          <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+          <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+          <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+        </svg>
+        <?php elseif($item['icon'] === 'package'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path>
+          <path d="M12 22V12"></path>
+          <polyline points="3.29 7 12 12 20.71 7"></polyline>
+          <path d="m7.5 4.27 9 5.15"></path>
+        </svg>
+        <?php elseif($item['icon'] === 'shopping-bag'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <?php elseif($item['icon'] === 'chart-column'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+          <path d="M18 17V9"></path>
+          <path d="M13 17V5"></path>
+          <path d="M8 17v-3"></path>
+        </svg>
+        <?php elseif($item['icon'] === 'message-square'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-icon lucide-message-square w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+        </svg>
+        <?php elseif($item['icon'] === 'percent'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <line x1="19" x2="5" y1="5" y2="19"></line>
+          <circle cx="6.5" cy="6.5" r="2.5"></circle>
+          <circle cx="17.5" cy="17.5" r="2.5"></circle>
+        </svg>
+        <?php elseif($item['icon'] === 'wallet'): ?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-4 h-4 shrink-0 <?php echo e($item['active'] ? 'text-amber-600' : 'text-gray-400'); ?>">
+          <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path>
+          <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+        </svg>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+        <span class="flex-1"><?php echo e($item['label']); ?></span>
+        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($item['active']): ?>
+        <span class="ml-auto w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
+      </a>
+      <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
+    </nav>
+    <div class="p-4 border-t border-gray-100">
+      <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-xs px-3 py-2 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-3 h-3 shrink-0">
+          <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+          <path d="m9 11 3 3L22 4"></path>
+        </svg>
+        <span>Vendor Verified</span>
+      </div>
+    </div>
+  </div>
+</div><?php /**PATH C:\Users\fazar\indonesia-luxe-backup\indonesia-luxe\resources\views/vendor/partials/sidebar-mobile.blade.php ENDPATH**/ ?>

@@ -1,0 +1,1 @@
+tour-card-<?php echo e($tourPackage->id); ?><?php /**PATH C:\Users\fazar\indonesia-luxe-backup\indonesia-luxe\storage\framework\views/f4fe1c97cb849cd7f3803a97fa067973.blade.php ENDPATH**/ ?>

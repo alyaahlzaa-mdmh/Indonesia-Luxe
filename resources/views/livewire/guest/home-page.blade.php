@@ -134,38 +134,6 @@
         </div>
     </section>
 
-    <!-- Popular Tours -->
-    <section class="mb-16">
-        <div class="mb-6 flex items-center justify-between">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-1 font-medium">{{ __('home.tours_title') }}</h2>
-                <p class="text-slate-500 text-sm md:text-base">{{ __('home.tours_subtitle') }}</p>
-            </div>
-            <a href="{{ route('tours.index') }}" class="hidden md:flex items-center gap-2 text-amber-600 hover:text-amber-700 transition" data-discover="true">
-                {{ __('home.tours_view_all') }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                </svg></a>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            @forelse ($featuredPackages as $tourPackage)
-            <x-guest.tour-card :tourPackage="$tourPackage" :typeLabels="$typeLabels" variant="default" />
-            @empty
-            <p class="text-sm text-gray-500 col-span-2 lg:col-span-4 text-center py-8">{{ __('home.tours_empty') }}</p>
-            @endforelse
-        </div>
-        <div class="text-center mt-8 md:hidden">
-            <a href="{{ route('tours.index') }}" class="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition" data-discover="true">
-                {{ __('home.tours_view_all') }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4">
-                    <path d="m9 18 6-6-6-6"></path>
-                </svg>
-            </a>
-        </div>
-    </section>
-
     <!-- Promos -->
     <section class="mb-20">
         <h2 class="text-3xl md:text-3xl font-serif text-[#1e293b] mb-2 font-medium">{{ __('home.promos_title') }}</h2>

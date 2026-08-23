@@ -182,61 +182,6 @@
         </div>
     </section>
 
-    <!-- Popular Tours -->
-    <section class="mb-16">
-        <div class="mb-6 flex items-center justify-between">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-1 font-medium"><?php echo e(__('home.tours_title')); ?></h2>
-                <p class="text-slate-500 text-sm md:text-base"><?php echo e(__('home.tours_subtitle')); ?></p>
-            </div>
-            <a href="<?php echo e(route('tours.index')); ?>" class="hidden md:flex items-center gap-2 text-amber-600 hover:text-amber-700 transition" data-discover="true">
-                <?php echo e(__('home.tours_view_all')); ?>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                </svg></a>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__empty_1 = true; $__currentLoopData = $featuredPackages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tourPackage): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoop($loop->index); ?><?php endif; ?>
-            <?php if (isset($component)) { $__componentOriginal4dedb5c206e93a40e5dec0a39924845e = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal4dedb5c206e93a40e5dec0a39924845e = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.guest.tour-card','data' => ['tourPackage' => $tourPackage,'typeLabels' => $typeLabels,'variant' => 'default']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('guest.tour-card'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['tourPackage' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($tourPackage),'typeLabels' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($typeLabels),'variant' => 'default']); ?>
-<?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::processComponentKey($component); ?>
-
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal4dedb5c206e93a40e5dec0a39924845e)): ?>
-<?php $attributes = $__attributesOriginal4dedb5c206e93a40e5dec0a39924845e; ?>
-<?php unset($__attributesOriginal4dedb5c206e93a40e5dec0a39924845e); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal4dedb5c206e93a40e5dec0a39924845e)): ?>
-<?php $component = $__componentOriginal4dedb5c206e93a40e5dec0a39924845e; ?>
-<?php unset($__componentOriginal4dedb5c206e93a40e5dec0a39924845e); ?>
-<?php endif; ?>
-            <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
-            <p class="text-sm text-gray-500 col-span-2 lg:col-span-4 text-center py-8"><?php echo e(__('home.tours_empty')); ?></p>
-            <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
-        </div>
-        <div class="text-center mt-8 md:hidden">
-            <a href="<?php echo e(route('tours.index')); ?>" class="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition" data-discover="true">
-                <?php echo e(__('home.tours_view_all')); ?>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4">
-                    <path d="m9 18 6-6-6-6"></path>
-                </svg>
-            </a>
-        </div>
-    </section>
-
     <!-- Promos -->
     <section class="mb-20">
         <h2 class="text-3xl md:text-3xl font-serif text-[#1e293b] mb-2 font-medium"><?php echo e(__('home.promos_title')); ?></h2>
