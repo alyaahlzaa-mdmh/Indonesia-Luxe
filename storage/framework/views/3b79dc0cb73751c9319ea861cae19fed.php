@@ -93,7 +93,7 @@
                 <?php $count = $typeCounts[$typeValue] ?? 0; ?>
                 <div class="flex flex-col items-center group w-[280px] sm:w-[320px]">
                     <div class="w-full h-[360px] md:h-[400px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="object-position: <?php echo e($meta['position'] ?? 'center'); ?>;">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <?php echo $meta['icon']; ?>
@@ -110,7 +110,7 @@
                 <?php $count = $typeCounts[$typeValue] ?? 0; ?>
                 <div class="flex flex-col items-center group w-[280px] sm:w-[320px]">
                     <div class="w-full h-[360px] md:h-[400px] overflow-hidden relative mb-4 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="<?php echo e(asset('images/' . $meta['img'])); ?>" alt="<?php echo e($typeLabels[$typeValue]); ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="object-position: <?php echo e($meta['position'] ?? 'center'); ?>;">
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <?php echo $meta['icon']; ?>
