@@ -149,8 +149,6 @@
                     </div>
                     @endforeach
                 </div>
-
-                <!-- Itinerary -->
                 <h3 class="text-lg font-bold mt-10 mb-6 text-slate-800 border-b pb-2" id="itinerary">{{ __('tour_detail.itinerary_title') }}</h3>
                 @php
                     $itineraries = count($tourPackage->itineraries ?? []) > 0 ? $tourPackage->itineraries : collect([

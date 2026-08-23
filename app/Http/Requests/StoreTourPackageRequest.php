@@ -30,10 +30,8 @@ class StoreTourPackageRequest extends FormRequest
             'description' => ['required', 'string'],
             'meeting_point' => ['nullable', 'string', 'max:255'],
             'price_per_person' => ['required', 'numeric', 'min:0'],
-            'duration' => ['required', 'string', 'max:255'],
+            'duration_hours' => ['nullable', 'integer', 'min:1'],
             'max_participants' => ['nullable', 'integer', 'min:1'],
-            'start_date' => ['required', 'date'],
-            'end_date' => ['required', 'date', 'after_or_equal:start_date'],
             'cover_image' => ['required', 'file', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
             'extra_photos' => ['nullable', 'array', 'max:4'],
             'extra_photos.*' => ['file', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
@@ -43,8 +41,8 @@ class StoreTourPackageRequest extends FormRequest
             'included.*' => ['nullable', 'string', 'max:255'],
             'itineraries' => ['nullable', 'array'],
             'itineraries.*.description' => ['nullable', 'string'],
-            'pickup_points' => ['required', 'array', 'min:1'],
-            'pickup_points.*' => ['required', 'string', 'max:255'],
+            'pickup_points' => ['nullable', 'array'],
+            'pickup_points.*' => ['nullable', 'string', 'max:255'],
         ];
     }
 

@@ -512,15 +512,11 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">ASEAN Visa Exemption</h3>
+                            <h3 class="font-serif font-medium text-slate-800 text-lg mb-1">Visa Exemption (Free Entry)</h3>
                             <p class="text-[13px] text-slate-500">Free entry for neighbors</p>
                         </div>
                     </div>
                     <ul class="space-y-3 mb-6 flex-1">
-                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
-                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            <span><strong class="font-medium text-gray-800">Eligibility:</strong> ASEAN passport holders (e.g., Singapore, Malaysia, Thailand)</span>
-                        </li>
                         <li class="flex items-start gap-2.5 text-sm text-gray-600">
                             <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             <span><strong class="font-medium text-gray-800">Stay:</strong> Up to 30 days (non-extendable)</span>
@@ -529,9 +525,13 @@
                             <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             <span><strong class="font-medium text-gray-800">Fee:</strong> Free</span>
                         </li>
+                        <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                            <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span><strong class="font-medium text-gray-800">Eligibility:</strong> Passports from designated BVK countries (ASEAN, Hong Kong, Turkiye, Brazil, Colombia, etc.)</span>
+                        </li>
                     </ul>
-                    <a href="https://evisa.imigrasi.go.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full bg-amber-500 hover:bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm">
-                        View Eligible Countries (Flag)
+                    <a href="https://www.imigrasi.go.id/wna/daftar-negara-voa-bvk-calling-visa/daftar-negara-bebas-visa-kunjungan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full bg-amber-500 hover:bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm">
+                        View Eligible BVK Countries
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     </a>
                 </div>

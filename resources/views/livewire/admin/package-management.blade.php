@@ -7,7 +7,7 @@
                 {{ $totalCount }} total — {{ $internalCount }} Internal (Indoluxe) — {{ $pendingCount }} pending vendor
             </p>
         </div>
-        
+
         <div class="flex flex-wrap items-center gap-3">
             <button wire:click="openCreateForm" class="px-5 py-2.5 bg-[#cca462] text-white rounded-full text-xs font-bold hover:bg-[#b89355] transition-all flex items-center gap-2 shadow-sm shadow-[#cca462]/20">
                 <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" /></svg>
@@ -15,19 +15,19 @@
             </button>
 
             <div class="flex bg-white p-1 rounded-full border border-gray-100 shadow-sm overflow-x-auto whitespace-nowrap scrollbar-hide">
-                <button wire:click="setTab('semua')" 
+                <button wire:click="setTab('semua')"
                     class="px-5 py-2 rounded-full text-xs font-bold transition-all shrink-0 {{ $activeTab === 'semua' ? 'bg-[#cca462] text-white shadow-md' : 'text-gray-400 hover:text-gray-600' }}">
                     Semua <span class="ml-1 opacity-70">{{ $totalCount }}</span>
                 </button>
-                <button wire:click="setTab('pending')" 
+                <button wire:click="setTab('pending')"
                     class="px-5 py-2 rounded-full text-xs font-bold transition-all shrink-0 {{ $activeTab === 'pending' ? 'bg-[#cca462] text-white shadow-md' : 'text-gray-400 hover:text-gray-600' }}">
                     Pending <span class="ml-1 opacity-70">{{ $pendingCount }}</span>
                 </button>
-                <button wire:click="setTab('approved')" 
+                <button wire:click="setTab('approved')"
                     class="px-5 py-2 rounded-full text-xs font-bold transition-all shrink-0 {{ $activeTab === 'approved' ? 'bg-[#cca462] text-white shadow-md' : 'text-gray-400 hover:text-gray-600' }}">
                     Disetujui <span class="ml-1 opacity-70">{{ $approvedCount }}</span>
                 </button>
-                <button wire:click="setTab('rejected')" 
+                <button wire:click="setTab('rejected')"
                     class="px-5 py-2 rounded-full text-xs font-bold transition-all shrink-0 {{ $activeTab === 'rejected' ? 'bg-[#cca462] text-white shadow-md' : 'text-gray-400 hover:text-gray-600' }}">
                     Ditolak <span class="ml-1 opacity-70">{{ $rejectedCount }}</span>
                 </button>
@@ -151,7 +151,7 @@
         <div class="w-full max-w-md">
             <x-admin.search-input model="search" :value="$search" :debounce="500" placeholder="Cari paket tour berdasarkan judul..." />
         </div>
-        
+
         <div class="flex items-center gap-4">
             {{-- Additional filters could go here --}}
         </div>
@@ -192,9 +192,9 @@
 
             {{-- Image Side --}}
             <div class="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden bg-gray-200">
-                <img src="{{ $selectedPackage->coverImageUrl() }}" 
+                <img src="{{ $selectedPackage->coverImageUrl() }}"
                      class="w-full h-full object-cover" />
-                
+
                 <div class="absolute top-8 left-8">
                     <span class="bg-[#1e1e1e]/60 backdrop-blur-md text-white text-[11px] font-bold px-4 py-2 rounded-lg uppercase tracking-widest">
                         {{ $selectedPackage->type->label() }}
@@ -212,18 +212,18 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4 mb-10">
+                <div class="gap-4 mb-10">
                     <div class="bg-[#fffcf0] p-6 rounded-2xl border border-[#fff5cc]">
                         <p class="text-[10px] text-[#cca462] font-bold uppercase tracking-widest mb-1">HARGA</p>
                         <p class="text-2xl font-bold text-[#1e1e1e]">
                             @if($selectedPackage->price_per_person >= 1000000)
-                                Rp {{ number_format($selectedPackage->price_per_person / 1000000, 1) }}jt
+                                Rp {{ number_format($selectedPackage->price_per_person / 1000000, 1) }}.000.000,00
                             @else
-                                Rp {{ number_format($selectedPackage->price_per_person / 1000, 0) }}rb
+                                Rp {{ number_format($selectedPackage->price_per_person / 1000, 0) }}.000,00
                             @endif
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                         <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1">DURASI</p>
                         <p class="text-2xl font-bold text-[#1e1e1e]">
                             {{ $selectedPackage->duration_hours ? ceil($selectedPackage->duration_hours / 24) : '1' }} Hari
@@ -275,7 +275,7 @@
                             Publish
                         </button>
                     @endif
-                    
+
                     <button wire:click="confirmDeleteDetail({{ $selectedPackage->id }})" class="flex-1 bg-[#fff0f0] text-[#ff4d4f] py-3 rounded-xl text-sm font-bold hover:bg-red-50 transition-all flex items-center justify-center gap-2">
                         <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                         Hapus
@@ -311,7 +311,7 @@
             <p class="text-gray-500 text-sm mb-4">
                 Berikan alasan penolakan agar vendor dapat melakukan perbaikan.
             </p>
-            <textarea wire:model="rejectReason" 
+            <textarea wire:model="rejectReason"
                       class="w-full rounded-xl border-gray-200 text-sm p-4 h-32 mb-6 focus:ring-red-500 focus:border-red-500"
                       placeholder="Contoh: Deskripsi kurang lengkap, gambar pecah..."></textarea>
             @error('rejectReason') <p class="text-xs text-red-500 mb-4">{{ $message }}</p> @enderror

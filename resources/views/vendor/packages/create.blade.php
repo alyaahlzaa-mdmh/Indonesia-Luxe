@@ -27,8 +27,8 @@
     </div>
 
     <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-100"
-        x-data="{ 
-            categoryId: '{{ old('tour_category_id') }}', 
+        x-data="{
+            categoryId: '{{ old('tour_category_id') }}',
             type: '{{ old('type') }}',
             categoryToType: {
                 @foreach($categories as $cat)
@@ -98,14 +98,6 @@
                             required value="{{ old('price_per_person') }}">
                     </div>
                     @error('price_per_person') <p class="text-[11px] text-red-500 mt-1">{{ $message }}</p> @enderror
-                </div>
-
-                <div class="space-y-1.5">
-                    <label for="duration" class="text-xs text-gray-500 font-medium block">Durasi <span class="text-red-500">*</span></label>
-                    <input type="text" name="duration" id="duration" placeholder="Contoh: 4 Hari 3 Malam"
-                        class="w-full border rounded-xl px-4 py-2.5 text-sm outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition {{ $errors->has('duration') ? 'border-red-500 bg-red-50/10' : 'border-gray-200' }}"
-                        required value="{{ old('duration') }}">
-                    @error('duration') <p class="text-[11px] text-red-500 mt-1">{{ $message }}</p> @enderror
                 </div>
 
                 <div class="space-y-1.5">
