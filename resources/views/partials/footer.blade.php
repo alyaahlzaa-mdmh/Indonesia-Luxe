@@ -7,7 +7,7 @@
       </div>
       <div>
         <h3 class="text-amber-400 mb-4">{{ __('footer.information') }}</h3>
-        <div class="space-y-2"><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search" data-discover="true">{{ __('footer.search_tour') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/login" data-discover="true">{{ __('footer.login') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/register" data-discover="true">{{ __('footer.register_vendor') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="#" data-discover="true">{{ __('footer.visa_info') }}</a></div>
+        <div class="space-y-2"><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/search" data-discover="true">{{ __('footer.search_tour') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/login" data-discover="true">{{ __('footer.login') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="/register" data-discover="true">{{ __('footer.register_vendor') }}</a><a class="block text-gray-400 hover:text-amber-400 text-sm transition" href="#visa-information" data-discover="true">{{ __('footer.visa_info') }}</a></div>
       </div>
       <div>
         <h3 class="text-amber-400 mb-4">{{ __('footer.contact_us') }}</h3>

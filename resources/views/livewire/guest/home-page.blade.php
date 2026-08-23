@@ -362,7 +362,7 @@
     </section>
 
     {{-- Visa Information --}}
-    <section class="mb-24 mt-16">
+    <section class="mb-24 mt-16" id="visa-information">
         <div class="pt-10 max-w-5xl mx-auto px-4 md:px-2">
             <h2 class="text-2xl md:text-[28px] font-serif text-[#1e293b] font-medium mb-1.5 tracking-wide">Visa Information</h2>
             <p class="text-slate-500 text-[13px] mb-8 font-light tracking-wide">Planning your trip to Indonesia? Here is a quick guide to entry requirements, visa options, and essential travel documents for your visit.</p>
@@ -431,6 +431,10 @@
                             <span><strong class="font-medium text-gray-800">Fee:</strong> Free</span>
                         </li>
                     </ul>
+                    <a href="https://evisa.imigrasi.go.id" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 w-full bg-amber-500 hover:bg-amber-600 text-white px-4 py-2.5 rounded-xl font-medium transition-colors text-sm">
+                        View Eligible Countries (Flag)
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
                 </div>
 
                 <!-- Card 3: Extended Tourism -->
