@@ -24,7 +24,7 @@ return [
     */
 
   'whatsapp' => [
-    'admin' => env('ADMIN_WHATSAPP', '6287890333000'),
+    'admin' => env('ADMIN_WHATSAPP', '628111822823000'),
     'default_message' => env('ADMIN_WHATSAPP_MESSAGE', 'Halo, saya ingin bertanya tentang trip di Indonesia Luxe.'),
   ],
 
@@ -39,7 +39,7 @@ return [
     */
 
   'phone' => [
-    'admin' => env('ADMIN_PHONE', '+6287890333000'),
+    'admin' => env('ADMIN_PHONE', '+628111822823000'),
   ],
 
 ];

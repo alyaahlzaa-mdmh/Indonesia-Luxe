@@ -378,7 +378,7 @@ $roleLabel = $user?->role?->name;
   <div x-show="showVendorSidebar" class="md:hidden fixed inset-0 top-16 bg-white z-50 overflow-y-auto">
     <div class="px-4 py-3 space-y-2">
       <a class="block py-2 text-gray-700" href="{{ route('home') }}" data-discover="true">{{ __('navbar.home') }}</a>
-      <a class="block py-2 text-gray-600 pl-4" href="{{ route('tours.index') }}?type=open_trip" data-discover="true">Open Trip</a>
+      <a class="block py-2 text-gray-600 pl-4" href="{{ route('tours.index') }}?type=open_trip" data-discover="true">Open </a>
       <a class="block py-2 text-gray-600 pl-4" href="{{ route('tours.index') }}?type=private_tour" data-discover="true">Private Tour</a>
       <a class="block py-2 text-gray-600 pl-4" href="{{ route('tours.index') }}?type=hiking_camping" data-discover="true">Hiking / Camping</a>
       <a class="block py-2 text-gray-600 pl-4" href="{{ route('tours.index') }}?type=rafting" data-discover="true">Rafting</a>

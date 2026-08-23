@@ -48,26 +48,76 @@
 <div class="max-w-6xl mx-auto px-4 w-full">
     <!-- Activity Categories -->
     <section class="mb-20 text-center">
+        <div class="mb-6">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id aut vel magnam nemo deleniti itaque accusantium. Enim dolores nemo consequuntur vitae voluptatem animi aliquid mollitia iusto? Optio corrupti suscipit quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae culpa blanditiis consequatur amet qui sunt impedit omnis repudiandae minima laboriosam rerum facilis, eaque eligendi iste, quod, minus et maiores adipisci ex? Sint quo cupiditate ipsa in voluptatem soluta voluptates quidem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde recusandae enim fuga similique incidunt ipsa, quam esse quidem dolore ratione eos vel delectus illo eligendi ullam commodi sequi fugit magnam laboriosam! Dignissimos distinctio quia quos nihil asperiores rerum itaque similique perspiciatis incidunt sunt. Eius deleniti reprehenderit id quibusdam corporis optio quidem porro dolor maxime, aliquid laboriosam, veritatis est commodi! A et amet eveniet omnis nostrum numquam fuga, quis saepe at cum doloribus. Et molestias est, quod explicabo ipsa atque suscipit ea, dicta reprehenderit sunt minima, eligendi similique quisquam voluptate quasi quidem asperiores nesciunt temporibus repellat modi voluptates laboriosam perferendis. Hic.</p>
+            </div>
         <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-2 font-medium">{{ __('home.categories_title') }}</h2>
         <p class="text-slate-500 text-sm md:text-base mb-10">{{ __('home.categories_subtitle', ['count' => count($categories)]) }}</p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center gap-4 md:gap-5 pb-6">
-            @foreach($activityMeta as $typeValue => $meta)
-            @php $count = $typeCounts[$typeValue] ?? 0; @endphp
-            <a href="{{ route('tours.index') }}?type={{ $typeValue }}" class="flex flex-col items-center group w-full md:w-[136px]">
-                <div class="w-full aspect-square md:w-[136px] md:h-[136px] rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                    <img src="{{ asset('images/' . $meta['img']) }}" alt="{{ $typeLabels[$typeValue] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        {!! $meta['icon'] !!}
+        <div x-data="{
+                scrollNext() {
+                    let container = this.$refs.carousel;
+                    if(container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                        container.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        container.scrollBy({ left: 156, behavior: 'smooth' });
+                    }
+                }
+            }"
+            x-init="setInterval(() => scrollNext(), 2000)"
+            class="relative w-full">
+            
+            <div x-ref="carousel" class="flex overflow-x-auto gap-4 md:gap-5 pb-6 snap-x snap-mandatory hide-scrollbar">
+                @foreach($activityMeta as $typeValue => $meta)
+                @php $count = $typeCounts[$typeValue] ?? 0; @endphp
+                <a href="{{ route('tours.index') }}?type={{ $typeValue }}" class="flex-shrink-0 snap-start flex flex-col items-center group w-[136px]">
+                    <div class="w-full aspect-square md:w-[136px] md:h-[136px] rounded-[18px] overflow-hidden relative mb-3 cursor-pointer shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="{{ asset('images/' . $meta['img']) }}" alt="{{ $typeLabels[$typeValue] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            {!! $meta['icon'] !!}
+                        </div>
                     </div>
-                </div>
-                <h3 class="font-serif font-medium text-slate-800 text-[14px] sm:text-[15px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center">{!! str_replace(' / ', ' /<br>', $typeLabels[$typeValue]) !!}</h3>
-                <p class="text-slate-400 text-[11px] leading-tight text-center px-1">{{ __('home.categories_packages_available', ['count' => $count]) }}</p>
-            </a>
-            @endforeach
+                    <h3 class="font-serif font-medium text-slate-800 text-[14px] sm:text-[15px] mb-1 leading-tight group-hover:text-amber-600 transition-colors text-center">{!! str_replace(' / ', ' /<br>', $typeLabels[$typeValue]) !!}</h3>
+                    <p class="text-slate-400 text-[11px] leading-tight text-center px-1">{{ __('home.categories_packages_available', ['count' => $count]) }}</p>
+                </a>
+                @endforeach
+            </div>
         </div>
     </section>
+
+    <!-- Popular Tours -->
+    {{-- <section class="mb-16">
+        <div class="mb-6 flex items-center justify-between">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif text-[#1e293b] mb-1 font-medium">{{ __('home.tours_title') }}</h2>
+                <p class="text-slate-500 text-sm md:text-base">{{ __('home.tours_subtitle') }}</p>
+            </div>
+            <a href="{{ route('tours.index') }}" class="hidden md:flex items-center gap-2 text-amber-600 hover:text-amber-700 transition" data-discover="true">
+                {{ __('home.tours_view_all') }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg></a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            @forelse ($featuredPackages as $tourPackage)
+            <x-guest.tour-card :tourPackage="$tourPackage" :typeLabels="$typeLabels" variant="default" />
+            @empty
+            <p class="text-sm text-gray-500 col-span-2 lg:col-span-4 text-center py-8">{{ __('home.tours_empty') }}</p>
+            @endforelse
+        </div>
+        <div class="text-center mt-8 md:hidden">
+            <a href="{{ route('tours.index') }}" class="inline-flex items-center gap-2 bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition" data-discover="true">
+                {{ __('home.tours_view_all') }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4">
+                    <path d="m9 18 6-6-6-6"></path>
+                </svg>
+            </a>
+        </div>
+    </section> --}}
 
     <!-- Popular Tours -->
     <section class="mb-16">
@@ -170,7 +220,7 @@
         <div id="destinasi-scroll" class="flex overflow-x-auto gap-4 md:gap-5 pb-4 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory hide-scrollbar">
             @php
             $destinations = [
-            ['name' => 'Jakarta', 'count' => '85', 'img' => 'jakarta.jpg'],
+            ['name' => 'Jakarta', 'count' => '1000', 'img' => 'jakarta.jpg'],
             ['name' => 'Bali', 'count' => '210', 'img' => 'bali.jpg'],
             ['name' => 'Yogyakarta', 'count' => '120', 'img' => 'yogyakarta.jpg'],
             ['name' => 'Lombok', 'count' => '75', 'img' => 'lombok.jpg'],
